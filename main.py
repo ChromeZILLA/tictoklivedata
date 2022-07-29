@@ -23,10 +23,11 @@ async def on_gift(event: GiftEvent):
     if event.gift.gift_type == 1:
         if event.gift.repeat_end == 1:
             print(
-                f"{event.user.uniqueId} sent {event.gift.repeat_count}x \"{event.gift.extended_gift.name} \"{event.gift.giftId}")
+                f"{event.user.uniqueId} sent {event.gift.repeat_count}x \"{event.gift.extended_gift.name} "
+                f"\"{event.gift.giftId}")
 
 
-    # It's not type 1, which means it can't have a streak & is automatically over
+# It's not type 1, which means it can't have a streak & is automatically over
     elif event.gift.gift_type != 1:
         print(f"{event.user.uniqueId} sent \"{event.gift.extended_gift.name}\"")
 
