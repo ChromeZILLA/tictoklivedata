@@ -1,16 +1,6 @@
 from TikTokLive import TikTokLiveClient
 from TikTokLive.types.events import CommentEvent, ConnectEvent, GiftEvent
 import winsound
-import mysql.connector
-import sqlite3 as sql
-
-# Creating connection object
-mydb = mysql.connector.connect(
-    host="192.168.2.100",
-    user="jbrooks",
-    password="Chrome",
-    database = "geeksforgeeks"
-)
 
 cursor = mydb.cursor()
 
